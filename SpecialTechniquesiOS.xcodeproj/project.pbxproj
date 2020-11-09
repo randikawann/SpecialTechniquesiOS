@@ -16,6 +16,7 @@
 		CD8278852556690100AC359A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8278832556690100AC359A /* LaunchScreen.storyboard */; };
 		CD8278902556690100AC359A /* SpecialTechniquesiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82788F2556690100AC359A /* SpecialTechniquesiOSTests.swift */; };
 		CD82789B2556690200AC359A /* SpecialTechniquesiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD82789A2556690200AC359A /* SpecialTechniquesiOSUITests.swift */; };
+		CD8278AD255673AB00AC359A /* Codable1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8278AC255673AB00AC359A /* Codable1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CD8278962556690200AC359A /* SpecialTechniquesiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpecialTechniquesiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD82789A2556690200AC359A /* SpecialTechniquesiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTechniquesiOSUITests.swift; sourceTree = "<group>"; };
 		CD82789C2556690200AC359A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD8278AC255673AB00AC359A /* Codable1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		CD827874255668FD00AC359A /* SpecialTechniquesiOS */ = {
 			isa = PBXGroup;
 			children = (
+				CD8278AB2556737A00AC359A /* CodableJSON */,
 				CD827875255668FD00AC359A /* AppDelegate.swift */,
 				CD827877255668FD00AC359A /* SceneDelegate.swift */,
 				CD827879255668FD00AC359A /* ViewController.swift */,
@@ -129,6 +132,14 @@
 				CD82789C2556690200AC359A /* Info.plist */,
 			);
 			path = SpecialTechniquesiOSUITests;
+			sourceTree = "<group>";
+		};
+		CD8278AB2556737A00AC359A /* CodableJSON */ = {
+			isa = PBXGroup;
+			children = (
+				CD8278AC255673AB00AC359A /* Codable1ViewController.swift */,
+			);
+			path = CodableJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				CD827876255668FD00AC359A /* AppDelegate.swift in Sources */,
 				CD827880255668FE00AC359A /* SpecialTechniquesiOS.xcdatamodeld in Sources */,
 				CD827878255668FD00AC359A /* SceneDelegate.swift in Sources */,
+				CD8278AD255673AB00AC359A /* Codable1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

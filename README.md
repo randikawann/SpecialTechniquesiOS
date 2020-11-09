@@ -111,3 +111,31 @@ private func addConstraints(){
 #### Screenshot of screen
 <img src = "branchscreenshot/03autolayout2.png"  height="300" /> 
 
+### Step4: added multipler for the width and height
+```
+private func addConstraints(){
+        var constraints = [NSLayoutConstraint]()
+        
+        //Add
+        constraints.append(myview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor))
+        constraints.append(myview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor))
+        constraints.append(myview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
+        constraints.append(myview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor))
+        
+            //Second view constraints
+        constraints.append(secondview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 120))
+//        constraints.append(secondview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
+        constraints.append(secondview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50))
+//        constraints.append(secondview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60))
+//
+            // Step 3: Must remove both constraints otherwise shows error
+        constraints.append(secondview.widthAnchor.constraint(
+                            equalTo: myview.widthAnchor, multiplier: 0.5))
+        constraints.append(secondview.heightAnchor.constraint(
+                            equalTo: myview.heightAnchor, multiplier: 0.3))
+        
+        //Active
+        NSLayoutConstraint.activate(constraints)
+    }
+```
+

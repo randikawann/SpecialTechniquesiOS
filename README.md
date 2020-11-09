@@ -127,8 +127,8 @@ private func addConstraints(){
 //        constraints.append(secondview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
         constraints.append(secondview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50))
 //        constraints.append(secondview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60))
-//
-            // Step 3: Must remove both constraints otherwise shows error
+
+            // Step 4: Must remove both constraints otherwise shows error
         constraints.append(secondview.widthAnchor.constraint(
                             equalTo: myview.widthAnchor, multiplier: 0.5))
         constraints.append(secondview.heightAnchor.constraint(

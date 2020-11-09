@@ -45,7 +45,7 @@ import Foundation
 
 struct Parser {
     
-    func parse(comp: @escaping ([Profile])->()){
+    func parse(){
         guard let url = URL(string: "https://dl.dropboxusercontent.com/s/6nt7fkdt7ck0lue/hotels.json") else {return}
         URLSession.shared.dataTask(with: url) {
             data, response, error in
@@ -55,8 +55,7 @@ struct Parser {
             }
             do{
                 let results = try JSONDecoder().decode(WholeResponse.self, from: data!)
-//                print(results)
-                comp(results.data)
+                print(results)
             }catch{
                 print("json decoder has error")
             }

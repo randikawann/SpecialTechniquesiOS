@@ -111,7 +111,7 @@ private func addConstraints(){
 #### Screenshot of screen
 <img src = "branchscreenshot/03autolayout2.png"  height="300" /> 
 
-### Step4: added multipler for the width and height
+### Step 4: added multipler for the width and height
 ```
 private func addConstraints(){
         var constraints = [NSLayoutConstraint]()
@@ -140,3 +140,23 @@ private func addConstraints(){
 ```
 #### Screenshot of screen
 <img src = "branchscreenshot/03autolayout3.png"  height="300" /> 
+
+### Step 5: added multilier and constraints
+```
+//        Step 5: added multilier and constraints
+        constraints.append(secondview.heightAnchor.constraint(equalTo: myview.heightAnchor, multiplier: 0.3, constant: 20))
+```  
+### Step 6: Center constraints of width and height | fixed width and height values
+```
+//        Step 6: center x access and y access
+        constraints.append(secondview.centerYAnchor.constraint(equalTo: myview.centerYAnchor))
+        constraints.append(secondview.centerXAnchor.constraint(equalTo: myview.centerXAnchor))
+
+//        Step 6: Width and height added
+        constraints.append(secondview.widthAnchor.constraint(equalToConstant: 120))
+        constraints.append(secondview.heightAnchor.constraint(equalToConstant: 200))
+```
+#### Screenshot of screen
+<img src = "branchscreenshot/03autolayout4.png"  height="300" /> 
+
+

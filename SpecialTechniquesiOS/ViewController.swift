@@ -5,6 +5,8 @@
 //  Created by Randika Wanninayaka on 11/6/2563 BE.
 //
 
+// Choose this as main view controller
+
 import UIKit
 
 class ViewController: UIViewController {

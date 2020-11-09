@@ -138,4 +138,5 @@ private func addConstraints(){
         NSLayoutConstraint.activate(constraints)
     }
 ```
-
+#### Screenshot of screen
+<img src = "branchscreenshot/03autolayout3.png"  height="300" /> 

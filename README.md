@@ -64,3 +64,50 @@ class ViewController: UIViewController {
 }
 
 ```
+#### Screenshot of screen
+<img src = "branchscreenshot/03autolayout1.png"  height="300" /> 
+
+### Step 3: Add second view also with 1st view
+#### 1. Create second view and add as sub view
+```
+    private let secondview: UIView = {
+        let myview = UIView()
+        myview.translatesAutoresizingMaskIntoConstraints = false
+        myview.backgroundColor = .red
+        return myview
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.view.backgroundColor = .cyan
+        view.addSubview(myview)
+        myview.addSubview(secondview)
+        addConstraints()
+        
+    }
+```
+#### 2. Change constraints in add constraints
+```
+private func addConstraints(){
+        var constraints = [NSLayoutConstraint]()
+        
+        //Add
+        constraints.append(myview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor))
+        constraints.append(myview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor))
+        constraints.append(myview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
+        constraints.append(myview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor))
+        
+            //Second view constraints
+        constraints.append(secondview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 120))
+        constraints.append(secondview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20))
+        constraints.append(secondview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50))
+        constraints.append(secondview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60))
+        
+        //Active
+        NSLayoutConstraint.activate(constraints)
+    }
+```
+#### Screenshot of screen
+<img src = "branchscreenshot/03autolayout2.png"  height="300" /> 
+

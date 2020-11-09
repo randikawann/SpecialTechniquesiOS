@@ -42,12 +42,6 @@ class UserViewController: UIViewController {
                 self.usertableview.reloadData()
             }
         }
-        
-//        1st step
-//        parser.parse()
-        
     }
-
-
 }
 

@@ -26,3 +26,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 ```
+### Step 2: Simple Constraint add to View
+```
+import UIKit
+
+class ViewController: UIViewController {
+
+    private let myview: UIView = {
+        let myview = UIView()
+        myview.translatesAutoresizingMaskIntoConstraints = false
+        myview.backgroundColor = .link
+        return myview
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.view.backgroundColor = .cyan
+        view.addSubview(myview)
+        addConstraints()
+        
+    }
+    
+
+    private func addConstraints(){
+        var constraints = [NSLayoutConstraint]()
+        
+        //Add
+        constraints.append(myview.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor))
+        constraints.append(myview.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor))
+        constraints.append(myview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor))
+        constraints.append(myview.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor))
+        
+        //Active
+        NSLayoutConstraint.activate(constraints)
+    }
+}
+
+```

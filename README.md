@@ -192,4 +192,4 @@ extension ListViewViewController: UITableViewDataSource, UITableViewDelegate {
 
 I think that you had some idea about the MVVM patten.. I will provide another tutorail about this topic. If you had questions related to this please drop a mail to randikawann@gmail.com
 
-###Thank you.
+### Thank you.

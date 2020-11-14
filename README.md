@@ -1,21 +1,4 @@
-# SpecialTechniquesiOS
-
-Basic Concepts of iOS developement included in this repo. 
-
-Every branches have individual code snippet in branch Readme.md file
-
-## master
-  meged from 02mvvm
-  
-## 01codable branch
-  added codable struct to the URLSession fetch data. it is very easy to handle json response
-  
- 
-## 02mvvm branch
-  MVVM is the concept of design paten. It basically has Model, View, View Model architecture.
-  
-  
-# Advanced MVVM
+#  MVVM Lesson 1
 MVVM define Model, View, View Model. This architecture basically help to maintain code base in properway. Here This section i am discuss about how you can use MVVM patten in iOS develpment. This application used web API with Codable model, URLSession and JSONdecoder used.
 
 Fistly move on to the Constent.swift file. Whole constant include in this.

@@ -91,6 +91,7 @@ class APIHandler {
 
 ```
 THis is another API handler with header file access. it is from another project. It added to study about header file conscept
+..........................................................
 ```
 //
 //  APIHandler.swift
@@ -145,6 +146,8 @@ class APIHandler {
 }
 
 ```
+.........................................
+
 describe of above code snipt: This process is basically in parallel processing.. mean of that is process going on background. Not in main thread. That is why it need to completionBlock when process is completed it should response. @escaping annotation  must need to show that must escape after process complete.
 
 View model use to added all buisness process from the View controller class. That is why it should handle all buisness logic and show in the view controller. My view model of this project is ListViewViewModel.swift

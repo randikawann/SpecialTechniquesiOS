@@ -90,6 +90,61 @@ class APIHandler {
 }
 
 ```
+THis is another API handler with header file access. it is from another project. It added to study about header file conscept
+```
+//
+//  APIHandler.swift
+//  USRestaurantMenus
+//
+//  Created by Randika Wanninayaka on 11/26/2020 .
+//
+
+import Foundation
+
+class APIHandler {
+ 
+    typealias completionBlock = ([Restaurant]) -> ()
+    
+    func getDataFromApi(url url2: String, completionBlock : @escaping completionBlock){
+        guard let url = URL(string: url2) else {return}
+        
+        //there is no header file
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        
+        // for the header value
+        var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            request.setValue("6ed-incorrect value", forHTTPHeaderField: "x-rapidapi-key")
+            request.setValue("us-restaurant-incorrect value", forHTTPHeaderField: "x-rapidapi-host")
+        
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            guard let _ = data,
+                  error == nil else {
+                  print(error?.localizedDescription ?? "Response Error")
+                  return }
+            do{
+                let results = try JSONDecoder().decode(Result.self, from: data!)
+                
+                
+//                print("results in url session \(results.result)")
+                
+                //pass value to view model
+                completionBlock(results.result?.data ?? [Restaurant]())
+                
+                
+             } catch let parsingError {
+                let nilarray = [Restaurant]()
+                completionBlock(nilarray)
+                print("Error", parsingError)
+           }
+            
+        }
+        task.resume()
+    }
+}
+
+```
 describe of above code snipt: This process is basically in parallel processing.. mean of that is process going on background. Not in main thread. That is why it need to completionBlock when process is completed it should response. @escaping annotation  must need to show that must escape after process complete.
 
 View model use to added all buisness process from the View controller class. That is why it should handle all buisness logic and show in the view controller. My view model of this project is ListViewViewModel.swift
